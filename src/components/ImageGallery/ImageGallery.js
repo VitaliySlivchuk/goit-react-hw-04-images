@@ -23,7 +23,7 @@ export const ImageGallery = ({ searchText }) => {
   }, [searchText]);
 
   useEffect(() => {
-    if (searchText === '') {
+    if (query === '') {
       return;
     }
     setLoader(true);
