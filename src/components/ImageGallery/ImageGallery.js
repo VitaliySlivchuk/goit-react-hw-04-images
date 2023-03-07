@@ -29,7 +29,7 @@ export const ImageGallery = ({ searchText }) => {
     setLoader(true);
     async function fetchData() {
       try {
-        const response = await getImages(searchText, page);
+        const response = await getImages(query, page);
         const imagesData = await response.json();
         setImages(prev => [...prev, ...imagesData.hits]);
       } catch (error) {
