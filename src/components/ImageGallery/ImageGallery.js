@@ -63,20 +63,19 @@ export const ImageGallery = ({ searchText }) => {
           <img src={modalItem.largeImageURL} alt={modalItem.tags} />
         </Modal>
       )}
-      {images.length > 0 && (
-        <ImageGalleryCss className="gallery">
-          {images.map(({ id, webformatURL }) => {
-            return (
-              <ImageGalleryItem
-                key={id}
-                id={id}
-                webformatURL={webformatURL}
-                togle={togleImage}
-              />
-            );
-          })}
-        </ImageGalleryCss>
-      )}
+      <ImageGalleryCss className="gallery">
+        {images.map(({ id, webformatURL }) => {
+          return (
+            <ImageGalleryItem
+              key={id}
+              id={id}
+              webformatURL={webformatURL}
+              togle={togleImage}
+            />
+          );
+        })}
+      </ImageGalleryCss>
+
       <Bars
         height="80"
         width="80"
